@@ -1,0 +1,89 @@
+@-webkit-keyframes slideInRight{
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+	-webkit-animation: slideInRight 1s 1;
+	animation: slideInRight 1s 1;
+	animation-fill-mode : both;
+}
+
+@-webkit-keyframes slideOutLeft {
+  from {
+    visibility:visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    visibility:visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slideOutLeft {
+	animation: slideOutLeft 1s 1;
+	-webkit-animation: slideOutLeft 1s 1;
+	animation-fill-mode : both;
+}
+
+.point {
+  width: 5px;
+  height: 5px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+.bigPoint {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #f0f0f0;
+  margin-left: 5px;
+}
+.points {
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+  direction: rtl;
+  vertical-align:middle;
+}
