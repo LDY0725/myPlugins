@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Watch Demo</title>
+  <style media="screen">
+  </style>
+</head>
+
+<body>
+  <script src="./Dep.js" type="text/javascript"></script>
+  <script src="./Observed.js" type="text/javascript"></script>
+  <script src="./Watch.JS" type="text/javascript"></script>
+  <script type="text/javascript">
+    /******************* test **********************************/
+    var json = {
+      'data': {
+        'name': 'xiaoming',
+        'tel': '123456789',
+        'friends': [{
+          'name': 'xiaohong',
+          'tel': '123456789',
+        }, {
+          'name': 'xiaojiang',
+          'tel': '123456789',
+        }, {
+          'name': 'xiaoli',
+          'tel': '123456789',
+        }]
+      },
+    }
+
+    var observed = new Observed(json)
+    var watch = new Watch(observed, 'name',()=>{
+      console.log('hello');
+    })
+  </script>
+</body>
+
+</html>
